@@ -1,23 +1,24 @@
 import logo from './logo.svg';
+import Profilecomponent from './profile/Profilecomponent'
 import './App.css';
+import photo from './sport.jpeg'
 
-function App() {
+const App=() =>{
+  const handleAlert = (fullName)=>{
+    alert(`hi! welcome to the website ${fullName}`)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Profilecomponent
+     fullName='slim ben miled'
+     bio='fqsfqsflqsflslfsmlqflmmlfslmflmsqlkmfms'
+     profession=' full stack js developper '
+     handleAlert={handleAlert}
+     >
+      
+         {photo}
+       
+       </Profilecomponent>
     </div>
   );
 }
